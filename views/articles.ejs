@@ -31,7 +31,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <a class="navbar-brand" href="/">Blog Senang-senang</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -40,16 +40,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post.html">Sample Post</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="/login">Login</a>
           </li>
         </ul>
       </div>
@@ -63,11 +60,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Man must explore, and this is exploration at its greatest</h1>
-            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+            <h1><%= data.title%></h1>
+            <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
             <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2018</span>
+              <a href="#"><%=data.Author.firstName%></a>
+              on <%=data.createdAt.toDateString()%></span>
           </div>
         </div>
       </div>
@@ -79,7 +76,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a
+          <p><%=data.article%></p>
+          <!-- <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a
             globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which
             there is no center because every point, or none, is center — an equal earth which all men occupy as equals.
             The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
@@ -137,7 +135,7 @@
 
           <p>Placeholder text by
             <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
-            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p> -->
         </div>
       </div>
     </div>
@@ -191,7 +189,9 @@
 
   <!-- Custom scripts for this template -->
   <script src="https://blackrockdigital.github.io/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
-
+<script>
+  let dat = {"id":1,"title":"What is Lorem Ipsum","article":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an \n      unknown printer took a galley of type and scrambled it to make a type specimen book. \n      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, \n      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","AuthorId":1,"TagsId":1,"createdAt":"2018-09-27T19:10:30.339Z","updatedAt":"2018-09-27T19:10:30.339Z","Author":{"id":1,"firstName":"Lundy","lastName":"Orlando","username":"simplyeazy","email":"simplyeazy@gmail.com","password":"lundy","createdAt":"2018-09-27T19:10:30.314Z","updatedAt":"2018-09-27T19:10:30.314Z"},"Tags":[{"id":1,"tagName":"Lorem","ArticleId":1,"createdAt":"2018-09-27T19:10:30.359Z","updatedAt":"2018-09-27T19:10:30.359Z"},{"id":3,"tagName":"Dolor","ArticleId":1,"createdAt":"2018-09-27T19:10:30.359Z","updatedAt":"2018-09-27T19:10:30.359Z"}]}
+</script>
 </body>
 
 </html>
